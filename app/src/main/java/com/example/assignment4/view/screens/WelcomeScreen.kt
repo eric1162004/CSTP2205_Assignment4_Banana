@@ -28,7 +28,7 @@ fun WelcomeScreen() {
             modifier = Modifier
                 .fillMaxWidth()
                 .scale(1.05f)
-                .weight(.75f)
+                .weight(.8f)
         )
 
         Spacer(

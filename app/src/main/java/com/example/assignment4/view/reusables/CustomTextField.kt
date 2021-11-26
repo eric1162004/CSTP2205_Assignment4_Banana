@@ -25,7 +25,7 @@ fun CustomTextField(
     fontColor: Color = Color.Black,
     leadingImageResource: Int = R.drawable.banana_default,
     modifier: Modifier = Modifier,
-    padding: Dp = 14.dp,
+    padding: Dp = 12.dp,
     placeHolderText: String = "placeholder",
     value: String,
     onValueChange: (text: String) -> Unit,
@@ -71,6 +71,5 @@ fun CustomTextField(
                 innerTextField()
             }
         )
-
     }
 }

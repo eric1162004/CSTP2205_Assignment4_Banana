@@ -36,7 +36,7 @@ fun SignUpScreen(
                 .fillMaxWidth()
                 .scale(1.05f)
                 .weight(.8f)
-                .offset(y = 10.dp)
+//                .offset(y = 10.dp)
         )
 
         // Screen Content
