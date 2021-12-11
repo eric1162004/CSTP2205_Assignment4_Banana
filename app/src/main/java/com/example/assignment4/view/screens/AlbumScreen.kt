@@ -36,16 +36,21 @@ import kotlinx.coroutines.launch
 @ExperimentalPermissionsApi
 @ExperimentalFoundationApi
 @Composable
-fun AlbumScreen() {
+fun AlbumScreen(changeScreen: (toScreen: String) -> Unit) {
+    // control whether to display overlay screen
     var displayOverlayScreen by remember { mutableStateOf(false) }
 
+    // content to display at the moment
     var currentScreenContent by remember { mutableStateOf(Routes.ALBUM_SCREEN_10) }
 
-    var changeScreenContent: (toScreen: String) -> Unit = {
-        currentScreenContent = it
-    }
+    // parameter to send to screen-14
+    var date by remember { mutableStateOf("") }
 
-    var coroutineScope = rememberCoroutineScope()
+    // a callback to pass down to screen content for changing the currentScreenContent
+    var changeScreenContent: (toScreen: String, date: String) -> Unit = { toScreen, toDate ->
+        date = toDate
+        currentScreenContent = toScreen
+    }
 
     Box {
         Screen(
@@ -60,7 +65,7 @@ fun AlbumScreen() {
                                 backgroundColor = MaterialTheme.colors.primary,
                                 imageResource = R.drawable.arrow_back
                             ) {
-                                changeScreenContent(Routes.ALBUM_SCREEN_10)
+                                changeScreenContent(Routes.ALBUM_SCREEN_10, "")
                             }
                     },
                     rightIcon = {
@@ -76,15 +81,15 @@ fun AlbumScreen() {
         ) {
             // Screen content...
             when (currentScreenContent) {
-                Routes.ALBUM_SCREEN_10 -> AlbumScreen_10(
-                ) {
-                    changeScreenContent(it)
-                }
-                Routes.ALBUM_SCREEN_14 -> AlbumScreen_14()
+                Routes.ALBUM_SCREEN_10 -> AlbumScreen_10(changeScreenContent)
+                Routes.ALBUM_SCREEN_14 -> AlbumScreen_14(date)
                 else -> LoadingContent()
             }
         }
 
+        var coroutineScope = rememberCoroutineScope()
+
+        // OverlayScreen pops up when pressing the add icon in the topbar
         DiaryOverlayScreen(
             displayOverlayScreen = displayOverlayScreen,
             onDismissPressed = {
@@ -99,7 +104,8 @@ fun AlbumScreen() {
                         currentScreenContent = Routes.ALBUM_SCREEN_10
                     }
                 }
-            }
+            },
+            onBookIconPressed = { changeScreen(Routes.DIARY_WRITING_SCREEN) }
         )
     }
 }
@@ -107,7 +113,7 @@ fun AlbumScreen() {
 @ExperimentalFoundationApi
 @Composable
 fun AlbumScreen_10(
-    changeScreenContent: (toScreen: String) -> Unit
+    changeScreenContent: (toScreen: String, date: String) -> Unit
 ) {
     val imageUrls by remember { mutableStateOf(fakeImageUrls) }
 
@@ -118,7 +124,10 @@ fun AlbumScreen_10(
                     date = "Oct ${4 * (it + 1)}, 2021",
                     imageUrls = imageUrls
                 ) {
-                    changeScreenContent(Routes.ALBUM_SCREEN_14)
+                    changeScreenContent(
+                        Routes.ALBUM_SCREEN_14,
+                        "Oct ${4 * (it + 1)}, 2021"
+                    )
                 }
             }
         }
@@ -127,10 +136,12 @@ fun AlbumScreen_10(
 
 @ExperimentalPermissionsApi
 @Composable
-fun AlbumScreen_14(
-) {
-    Column() {
-        AlbumItemCard(imageUrl = fakeImageUrls[0])
+fun AlbumScreen_14(date: String) {
+    Column {
+        AlbumItemCard(
+            imageUrl = fakeImageUrls[0],
+            date = date
+        )
 
         Spacer(Modifier.height(Dm.marginMedium))
 

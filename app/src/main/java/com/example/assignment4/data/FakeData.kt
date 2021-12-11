@@ -5,6 +5,10 @@ import com.example.assignment4.data.entities.User
 import com.example.assignment4.utils.map.Coordinate
 import java.util.*
 
+/**
+ * Fake Data used in this mock assignment
+ * **/
+
 val fakeImageUrls = listOf(
     "https://picsum.photos/id/230/200/300",
     "https://picsum.photos/id/231/200/300",

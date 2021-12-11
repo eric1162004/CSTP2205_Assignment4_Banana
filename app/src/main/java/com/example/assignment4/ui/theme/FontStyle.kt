@@ -4,9 +4,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 
-object FontStyle {
-    var Bold: FontWeight = FontWeight.W800
-    var SemiBold: FontWeight = FontWeight.W700
+/**
+ * Define Font Sizes for this application.
+ * **/
 
+object FontStyle {
     var LogoFontSize : TextUnit = 35.sp
 }

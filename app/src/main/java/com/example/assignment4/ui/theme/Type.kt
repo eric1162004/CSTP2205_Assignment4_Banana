@@ -8,6 +8,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.example.assignment4.R
 
+/**
+ * Define font family and style for this application.
+ * **/
+
 val Outfit = FontFamily(
     Font(R.font.outfit_regular, FontWeight.Light),
     Font(R.font.outfit_semibold, FontWeight.Normal),

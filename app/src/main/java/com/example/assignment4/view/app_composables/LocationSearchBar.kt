@@ -10,6 +10,10 @@ import com.example.assignment4.view.reusables.CustomTextField
 import com.example.assignment4.view.reusables.IconInputField
 import com.example.testing.reusables.CircularImageButton
 
+/**
+ * A search bar used in Screen-11
+ **/
+
 @Composable
 fun LocationSearchBar(
     modifier: Modifier = Modifier,

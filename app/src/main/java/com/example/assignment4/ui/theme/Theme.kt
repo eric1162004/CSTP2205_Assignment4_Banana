@@ -6,6 +6,10 @@ import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 
+/**
+ * Material theme for this application.
+ * **/
+
 private val DarkColorPalette = darkColors(
     primary = PrimaryColor,
     secondary = SecondaryColor

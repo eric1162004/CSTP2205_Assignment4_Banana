@@ -9,6 +9,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import com.example.assignment4.ui.theme.Dm
 
 @Composable
@@ -17,6 +19,8 @@ fun AppTopBar(
     title: String = "App Title",
     backgroundColor: Color = Color.White,
     rightIcon: @Composable () -> Unit = {},
+    height: Dp = Dm.appTopBarHeight,
+    paddingVertical: Dp = 0.dp,
     modifier: Modifier = Modifier
 ) {
     Row(
@@ -24,7 +28,8 @@ fun AppTopBar(
             .fillMaxWidth()
             .background(backgroundColor)
             .padding(horizontal = Dm.marginLarge)
-            .height(Dm.appTopBarHeight),
+            .padding(vertical = paddingVertical)
+            .height(height),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {

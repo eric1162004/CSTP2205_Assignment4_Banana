@@ -13,6 +13,9 @@ import androidx.compose.ui.unit.dp
 import com.example.assignment4.R
 import com.example.assignment4.view.reusables.AppLogo
 
+/**
+ * The transitional screen when the application is launched.
+ * **/
 @Composable
 fun WelcomeScreen() {
     Column(

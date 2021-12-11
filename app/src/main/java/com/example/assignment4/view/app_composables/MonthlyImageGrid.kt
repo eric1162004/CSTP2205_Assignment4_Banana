@@ -11,6 +11,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import com.example.assignment4.view.reusables.ImageGrid
 
+/**
+ * An Image Grid that display a month title on the left column.
+ **/
+
 @Composable
 fun MonthlyImageGrid(
     imageUrls: List<String> = listOf(),

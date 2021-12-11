@@ -17,6 +17,10 @@ import com.example.assignment4.view.reusables.AppButton
 import com.example.assignment4.view.reusables.ImageGrid
 import com.example.assignment4.view.reusables.ImageRow
 
+/**
+ * A dairy entry container used in Screen-22
+ **/
+
 @ExperimentalFoundationApi
 @Composable
 fun DairyEntryCard(

@@ -3,6 +3,10 @@ package com.example.assignment4.view.screens
 import androidx.compose.runtime.*
 import com.example.assignment4.ui.theme.Routes
 
+/**
+ * This is the parent screen for the Login screen or the SignUp screen.
+ * **/
+
 @Composable
 fun AuthScreen(login: () -> Unit) {
     var currentScreenContent by remember { mutableStateOf(Routes.LOGIN) }

@@ -1,5 +1,9 @@
 package com.example.assignment4.ui.theme
 
+/**
+ * Define all Screen routes for this application.
+ * **/
+
 object Routes {
     val WELCOME: String = "WELCOME"
     val LOGIN: String = "LOGIN"
@@ -20,4 +24,6 @@ object Routes {
 
     val DIARY_SCREEN_9: String = "DIARY_SCREEN_9"
     val DIARY_SCREEN_16: String = "DIARY_SCREEN_16"
+
+    val DIARY_WRITING_SCREEN: String = "DIARY_WRITING_SCREEN"
 }

@@ -31,6 +31,12 @@ import com.example.assignment4.view.reusables.*
 import com.example.testing.reusables.CircularIconButton
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 
+/**
+ * This screen show a map to user.
+ * The map is annotated with where the user has been and
+ * information about the location.
+ * **/
+
 @ExperimentalFoundationApi
 @ExperimentalPermissionsApi
 @Composable

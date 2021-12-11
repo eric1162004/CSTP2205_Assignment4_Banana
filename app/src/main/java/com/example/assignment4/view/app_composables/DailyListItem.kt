@@ -19,6 +19,10 @@ import com.example.assignment4.R
 import com.example.assignment4.data.entities.DairyEntry
 import com.example.assignment4.ui.theme.Dm
 
+/**
+ * A dairy entry container used in Screen-21
+ **/
+
 @ExperimentalFoundationApi
 @Composable
 fun DailyListItem(

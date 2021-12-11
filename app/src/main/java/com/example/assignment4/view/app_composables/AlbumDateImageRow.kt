@@ -13,8 +13,13 @@ import androidx.compose.ui.unit.dp
 import com.example.assignment4.ui.theme.Dm
 import com.example.assignment4.view.reusables.ImageGrid
 
-/**AlbumDateImageRow only works on full width!!!
-Image width calculation depends on screen width.**/
+/**
+ * Show a row of Row. Used in Screen-21 and Screen-22.
+ *
+ * AlbumDateImageRow only works on full width!!!
+ * Image width calculation depends on screen width.
+ *
+ **/
 @Composable
 fun AlbumDateImageRow(
     date: String = "Oct 4 2021",

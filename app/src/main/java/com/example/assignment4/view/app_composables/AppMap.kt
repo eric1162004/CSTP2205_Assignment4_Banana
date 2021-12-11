@@ -28,8 +28,14 @@ import com.mapbox.maps.plugin.gestures.addOnMapClickListener
 import com.mapbox.maps.plugin.locationcomponent.location
 import com.mapbox.maps.plugin.scalebar.scalebar
 
-// Take a list of coordinates
-// trigger callback when an annotation is pressed
+/**
+ * Map View for this application.
+ *
+ * This Map View take a list of coordinates.
+ * Can trigger callback when an annotation is pressed.
+ *
+**/
+
 @SuppressLint("MissingPermission")
 @ExperimentalPermissionsApi
 @Composable

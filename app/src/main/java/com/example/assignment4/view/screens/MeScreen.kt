@@ -30,6 +30,16 @@ import com.example.assignment4.view.reusables.HorizontalDivider
 import com.example.assignment4.view.reusables.ProfileInfoSection
 import com.example.testing.reusables.CircularIconButton
 
+/**
+ * MeScreen is the parent screen for:
+ * screen-19, -20, -21, -22.
+ *
+ * Screen-19 displays monthly image grids
+ * Screen-20 displays user settings
+ * Screen-21 displays a list of dairy entries
+ * Screen-22 displays details of a dairy entry
+ * **/
+
 @ExperimentalFoundationApi
 @Composable
 fun MeScreen(logOut: () -> Unit) {

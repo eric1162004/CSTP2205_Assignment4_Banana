@@ -18,6 +18,10 @@ import com.example.assignment4.ui.theme.Routes
 import com.example.assignment4.view.reusables.*
 import com.example.testing.reusables.CircularImageButton
 
+/**
+ * Login Screen of the application
+ * **/
+
 @Composable
 fun LoginScreen(
     login: () -> Unit,
@@ -66,13 +70,16 @@ private fun LoginScreenLogic(
     var password by remember { mutableStateOf("") }
     var isRememberMeChecked by remember { mutableStateOf(false) }
 
+    // The Banana Application Logo
     AppIconRow()
 
+    // Input field Section
     InputFields(
         name, { name = it },
         password, { password = it }
     )
 
+    // Remember me Section
     RememberMeRow(
         isRememberMeChecked = isRememberMeChecked,
         onCheckBoxChange = { isRememberMeChecked = it }
@@ -86,8 +93,11 @@ private fun LoginScreenLogic(
     }
 
     OrSignInWithText()
+
+    // Social icons: facebook and google
     SocialIconRow()
 
+    // Don't have an account text
     DontHaveAnAccountText() {
         // go to sign up
         onCreateOnePressed(Routes.SIGNUP)

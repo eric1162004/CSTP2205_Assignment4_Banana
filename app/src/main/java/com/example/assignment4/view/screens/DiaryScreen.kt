@@ -40,9 +40,15 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.threeten.bp.YearMonth
 
+/**
+ * This file includes the screen-9 and 16.
+ * Screen-9 displays a dairy calender.
+ * Screen-16 display details about a dairy entry.
+ * **/
+
 @ExperimentalFoundationApi
 @Composable
-fun DiaryScreen() {
+fun DiaryScreen(changeScreen :(toScreen: String) -> Unit) {
     var displayOverlayScreen by remember { mutableStateOf(false) }
 
     var currentScreenContent by remember { mutableStateOf(Routes.DIARY_SCREEN_9) }
@@ -51,6 +57,7 @@ fun DiaryScreen() {
         currentScreenContent = it
     }
 
+    // Needed this Box to impose the OverlayScreen on top of the screen content
     Box {
         Screen(
             appTopBar = {
@@ -88,9 +95,11 @@ fun DiaryScreen() {
             }
         }
 
+        // Overlay Screen for this screen
         DiaryOverlayScreen(
             displayOverlayScreen = displayOverlayScreen,
-            onDismissPressed = { displayOverlayScreen = !displayOverlayScreen }
+            onDismissPressed = { displayOverlayScreen = !displayOverlayScreen },
+            onBookIconPressed = {changeScreen(Routes.DIARY_WRITING_SCREEN)}
         )
     }
 }

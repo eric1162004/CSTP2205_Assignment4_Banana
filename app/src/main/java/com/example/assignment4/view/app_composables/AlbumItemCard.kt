@@ -13,6 +13,11 @@ import coil.compose.rememberImagePainter
 import com.example.assignment4.R
 import com.example.assignment4.ui.theme.Dm
 
+/**
+ * Used in Screen-14.
+ *
+ * Provide a Card View.
+ * **/
 @Composable
 fun AlbumItemCard(
     location: String = "Stanley Park",

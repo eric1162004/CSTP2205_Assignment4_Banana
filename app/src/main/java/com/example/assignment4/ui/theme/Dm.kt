@@ -5,6 +5,10 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+/**
+ * Dimensions and sizes used this application.
+ * **/
+
 object Dm {
     var appTopBarHeight: Dp = 110.dp
     var appBarHeight: Dp = 70.dp

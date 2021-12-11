@@ -19,6 +19,9 @@ import com.example.assignment4.view.reusables.CustomTextField
 import com.example.testing.reusables.CircularIconButton
 import com.example.testing.reusables.CircularImageButton
 
+ /**
+  * This is the sign up screen.
+  * **/
 @Composable
 fun SignUpScreen(
     onCreateOnePressed: (toScreen: String) -> Unit,

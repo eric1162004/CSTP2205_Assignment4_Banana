@@ -6,6 +6,12 @@ import com.example.assignment4.ui.theme.Routes
 import com.example.testing.reusables.BottomBar
 import com.example.testing.reusables.BottomBarButton
 
+/**
+ * A app bottom bar with 4 buttons:
+ * album, my locations, diary and me.
+ *
+ * **/
+
 @Composable
 fun AppBottomBar(
     onBottomBarButtonPressed: (id: String) -> Unit = {}

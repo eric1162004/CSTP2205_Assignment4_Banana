@@ -24,6 +24,10 @@ import be.sigmadelta.calpose.widgets.DefaultDay
 import be.sigmadelta.calpose.widgets.DefaultHeader
 import org.threeten.bp.YearMonth
 
+/**
+ * Calender UI Example.
+ * **/
+
 @SuppressLint("NewApi")
 @Preview("DefaultPreview")
 @Composable
